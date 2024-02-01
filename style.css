@@ -1,0 +1,144 @@
+ @import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wraper{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3b3e3e;
+    animation:  up 3s linear 9.8s both;
+    position: absolute;
+    top: 0;
+
+}
+
+.loader{
+    height: 6rem;
+    width: 28rem;
+    /* background-color: black; */
+    overflow: hidden;
+    /* border: 1px solid red; */
+    position: relative;
+}
+.loader-text{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* background-color: #dadada; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 10px;
+    font-size: 2.3rem;
+    color: #71C9CE;
+}
+.loader-text span::after{
+    content: "";
+    position: absolute;
+    height: 70%;
+    top: 15px;
+    width: 90%;
+    right: 0;
+    background-color:#3b3e3e ;
+    border-left: 3px solid #71C9CE;
+    animation: shows 3s steps(20) both .01s;
+}
+@keyframes shows {
+    10%{
+        width: 90%;
+    }
+    20%{
+        width: 80%;
+    }
+    30%{
+        width: 70%;
+    }
+    40%{
+        width: 60%;
+    }
+    50%{
+        width: 50%;
+    }
+    60%{
+        width: 40%;
+    }
+    70%{
+        width: 30%;
+    }
+    80%{
+        width: 20%;
+    }
+    100%{
+        width: 10%;
+    }
+    /* 100%{
+        margin-top: -100px;
+    } */
+}
+.loader-text:nth-child(1){
+    transition:1s cubic-bezier(0.19, 1, 0.22, 1);
+    animation: topp .8s cubic-bezier(0.19, 1, 0.22, 1) 3.5s both;
+}
+.loader-text:nth-child(2){
+    transition:1s cubic-bezier(0.19, 1, 0.22, 1);
+    animation: topp .8s cubic-bezier(0.19, 1, 0.22, 1) 6s both;
+}
+.loader-text:nth-child(3){
+    transition:1s cubic-bezier(0.19, 1, 0.22, 1);
+    animation: topp .8s cubic-bezier(0.19, 1, 0.22, 1) 7.5s both;
+}
+.loader-text:nth-child(4){
+    transition:1s cubic-bezier(0.19, 1, 0.22, 1);
+    animation: topp .8s cubic-bezier(0.19, 1, 0.22, 1) 8.8s both;
+}
+.loader-text:nth-child(5){
+    transition:1s cubic-bezier(0.19, 1, 0.22, 1);
+    animation: topp .8s cubic-bezier(0.19, 1, 0.22, 1) 9.8s both;
+}
+@keyframes topp {
+    to{
+        margin-top: -5.8rem;
+    }
+}
+.anim{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 0;
+    background-color: #71C9CE;
+    animation: mid 1.5s linear 9.8s both;
+}
+.main{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 0;
+    background-color: #ffffff;
+    animation:  main 1.9s linear 10.8s both;
+}
+@keyframes up {
+    to{
+        transform: translateY(-100%);
+    }
+}
+@keyframes mid {
+    to{
+        height: 100dvh;
+    }
+}
+@keyframes main {
+    to{
+        height: 100dvh;
+    }
+}
+
